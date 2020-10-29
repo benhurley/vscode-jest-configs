@@ -1,0 +1,58 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Jest - All Tests",
+        "type": "node",
+        "request": "launch",
+        "env": { "CI": "true" },
+        "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-scripts",
+        "args": ["test", "--runInBand", "--colors", "--no-cache"],
+        "cwd": "${workspaceRoot}",
+        "protocol": "inspector",
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen"
+      },
+      {
+        "name": "Jest - All w/ Coverage",
+        "type": "node",
+        "request": "launch",
+        "env": { "CI": "true" },
+        "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-scripts",
+        "args": ["test", "--runInBand", "--colors", "--coverage", "--no-cache"],
+        "cwd": "${workspaceRoot}",
+        "protocol": "inspector",
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen"
+      },
+      {
+        "name": "Jest - Watch Mode",
+        "type": "node",
+        "request": "launch",
+        "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-scripts",
+        "args": ["test", "--runInBand", "--no-cache", "--watchAll"],
+        "cwd": "${workspaceRoot}",
+        "protocol": "inspector",
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen"
+      },
+      {
+        "name": "Jest - Open Files Only",
+        "type": "node",
+        "request": "launch",
+        "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-scripts",
+        "args": [
+          "test",
+          "${fileBasenameNoExtension}",
+          "--runInBand",
+          "--no-cache",
+          "--watchAll",
+          "--colors"
+        ],
+        "cwd": "${workspaceRoot}",
+        "protocol": "inspector",
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen"
+      }
+    ]
+}
